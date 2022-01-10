@@ -10,7 +10,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-logging.config.fileConfig("logging_config.ini")
+ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
+log_config_file_path = os.path.join(ROOT_DIR, "logging_config.ini")
+logging.config.fileConfig(log_config_file_path)
 
 
 class FacebookLogin(object):
